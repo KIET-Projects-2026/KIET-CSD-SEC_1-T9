@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rule-based Chatbot</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <main class="app" role="application">
+    <section class="chat-wrap" aria-label="Chat window">
+      <header>
+        <div class="logo" aria-hidden="true">🤖</div>
+        <div>
+          <div class="title">Rule-based Chatbot</div>
+          <p>Simple, deterministic responses using rules (no server)</p>
+        </div>
+      </header>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <div class="input-area" role="region" aria-label="Message input">
+        <input id="userInput" placeholder="Type a message (e.g. 'hello', 'help', 'hours')" autocomplete="off" />
+        <button id="sendBtn">Send</button>
+      </div>
+
+      <div class="controls">
+        <button id="clearBtn">Clear chat</button>
+        <button id="showRulesBtn">Show rules</button>
+      </div>
+    </section>
+
+    <aside class="panel" aria-label="Rules panel">
+      <h3>Active rules</h3>
+      <div id="rulesList" class="rule-list"></div>
+      <div class="tip">
+        <strong>Tip:</strong>
+        <p>Rules are checked top-to-bottom. First matching rule is used. Use keywords or regex for more advanced matching.</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
+
+
+
+
+
