@@ -1,0 +1,21 @@
+
+--- Schema for chat_sessions ---
+Column: id, Type: int, Null: NO, Key: PRI, Default: None, Extra: auto_increment
+Column: user_id, Type: int, Null: NO, Key: MUL, Default: None, Extra: 
+Column: created_at, Type: datetime, Null: YES, Key: , Default: CURRENT_TIMESTAMP, Extra: DEFAULT_GENERATED
+Column: title, Type: varchar(255), Null: NO, Key: , Default: New Chat, Extra: 
+
+--- Schema for chat_messages ---
+Column: id, Type: int, Null: NO, Key: PRI, Default: None, Extra: auto_increment
+Column: session_id, Type: int, Null: NO, Key: MUL, Default: None, Extra: 
+Column: role, Type: varchar(20), Null: NO, Key: , Default: None, Extra: 
+Column: content, Type: text, Null: NO, Key: , Default: None, Extra: 
+Column: created_at, Type: datetime, Null: YES, Key: , Default: CURRENT_TIMESTAMP, Extra: DEFAULT_GENERATED
+
+--- Schema for users ---
+Column: id, Type: int, Null: NO, Key: PRI, Default: None, Extra: auto_increment
+Column: name, Type: varchar(100), Null: NO, Key: , Default: None, Extra: 
+Column: email, Type: varchar(255), Null: NO, Key: UNI, Default: None, Extra: 
+Column: password_hash, Type: varchar(255), Null: NO, Key: , Default: None, Extra: 
+Column: api_key, Type: varchar(255), Null: NO, Key: UNI, Default: None, Extra: 
+Column: created_at, Type: datetime, Null: YES, Key: , Default: CURRENT_TIMESTAMP, Extra: DEFAULT_GENERATED

@@ -1,0 +1,95 @@
+.pdf-upload {
+  border: 2px dashed rgba(99, 102, 241, 0.3);
+  border-radius: 16px;
+  padding: 40px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(99, 102, 241, 0.04);
+  margin: 20px 24px;
+  min-height: 200px;
+}
+
+.pdf-upload:hover {
+  border-color: rgba(99, 102, 241, 0.55);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.pdf-upload--drag {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.12);
+  transform: scale(1.01);
+}
+
+.pdf-upload__idle,
+.pdf-upload__file,
+.pdf-upload__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.pdf-upload__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #818cf8;
+  margin-bottom: 4px;
+}
+
+.pdf-upload__label {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.pdf-upload__hint {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.pdf-upload__file {
+  color: #a5b4fc;
+}
+
+.pdf-upload__file svg {
+  color: #6366f1;
+}
+
+.pdf-upload__name {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 0;
+  word-break: break-all;
+}
+
+/* spinner */
+.pdf-upload__spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.pdf-upload__loading p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
